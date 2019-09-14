@@ -21,6 +21,7 @@
 		089C439E232CF6E400740EE2 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */; };
 		089C43A0232D07C100740EE2 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439F232D07C100740EE2 /* CollectionViewModel.swift */; };
 		089C43A2232D20AF00740EE2 /* DetailsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A1232D20AF00740EE2 /* DetailsUIViewController.swift */; };
+		089C43A4232D27A900740EE2 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A3232D27A800740EE2 /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
 		089C439F232D07C100740EE2 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		089C43A1232D20AF00740EE2 /* DetailsUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUIViewController.swift; sourceTree = "<group>"; };
+		089C43A3232D27A800740EE2 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */,
 				089C439F232D07C100740EE2 /* CollectionViewModel.swift */,
 				089C43A1232D20AF00740EE2 /* DetailsUIViewController.swift */,
+				089C43A3232D27A800740EE2 /* DetailsViewModel.swift */,
 			);
 			path = RepositoriesList;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				089C43A0232D07C100740EE2 /* CollectionViewModel.swift in Sources */,
 				089C4399232CF27500740EE2 /* RepositoryCollectionViewCell.swift in Sources */,
 				089C439E232CF6E400740EE2 /* HTTPRequestManager.swift in Sources */,
+				089C43A4232D27A900740EE2 /* DetailsViewModel.swift in Sources */,
 				089C43A2232D20AF00740EE2 /* DetailsUIViewController.swift in Sources */,
 				089C4397232CEF0B00740EE2 /* CollectionViewDataSource.swift in Sources */,
 			);

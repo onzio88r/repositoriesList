@@ -20,13 +20,30 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! RepositoryCollectionViewCell
         
-        cell.repository = listRepositories[indexPath.row]
-            
+        let repository = listRepositories[indexPath.row]
+        
+        let model = CollectionViewModel(repository: repository)
+        
+        ContributorsList(contributionUrl: repository.contributorsURL) { (response ) in
+            switch response {
+            case .success(let result) :
+                print(result.count)
+                model.contributors = result.count
+                cell.repoViewModel = model
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+        cell.repoViewModel = model
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailsVc = DetailsUIViewController()
+        let cell = collectionView.cellForItem(at: indexPath) as! RepositoryCollectionViewCell
+        detailsVc.repoViewModel = cell.repoViewModel
         self.navigationController?.pushViewController(detailsVc, animated: true)
     }
     

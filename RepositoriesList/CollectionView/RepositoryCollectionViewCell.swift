@@ -13,19 +13,19 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
     fileprivate var nameLabel: UILabel!
     fileprivate var descriptionLabel: UILabel!
     fileprivate var loginOwnerLabel: UILabel!
-    fileprivate var contributors: UILabel!
-        
-    var repository: Repository! {
+    fileprivate var contributorsLabel: UILabel!
+    
+    var repoViewModel: CollectionViewModel! {
         didSet {
-            
-            self.nameLabel.text = "Name: \(repository.name)"
-            self.descriptionLabel.text = "Description: \(repository.repositoryDescription ?? "")"
-            self.loginOwnerLabel.text = "Owner: \(repository.owner.login)"
-            self.contributors.text = "Contributors: "
-            
-            self.backgroundColor = repository.fork ? .green : .white
+        self.nameLabel.text = repoViewModel.name
+        self.descriptionLabel.text = repoViewModel.description
+        self.loginOwnerLabel.text = repoViewModel.loginOwner
+        self.contributorsLabel.text = "Contributors: \(repoViewModel.contributors)"
+        
+        self.backgroundColor = repoViewModel.fork ? .green : .white
         }
     }
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,8 +49,8 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         self.loginOwnerLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: frame.width, height: 15)))
         self.addSubview(loginOwnerLabel)
         
-        self.contributors = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: frame.width, height: 15)))
-        self.addSubview(contributors)
+        self.contributorsLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: frame.width, height: 15)))
+        self.addSubview(contributorsLabel)
         
         
         cellConstraint()
@@ -63,7 +63,7 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         loginOwnerLabel.translatesAutoresizingMaskIntoConstraints = false
-        contributors.translatesAutoresizingMaskIntoConstraints = false
+        contributorsLabel.translatesAutoresizingMaskIntoConstraints = false
         
         self.nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2).isActive = true
         self.nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 2).isActive = true
@@ -77,9 +77,9 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         self.loginOwnerLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 2).isActive = true
         self.loginOwnerLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 2).isActive = true
         
-        NSLayoutConstraint(item: contributors!, attribute: .top, relatedBy: .equal, toItem: loginOwnerLabel, attribute: .bottom, multiplier: 1.0, constant: 2).isActive = true
-        self.contributors.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 2).isActive = true
-        self.contributors.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 2).isActive = true
+        NSLayoutConstraint(item: contributorsLabel!, attribute: .top, relatedBy: .equal, toItem: loginOwnerLabel, attribute: .bottom, multiplier: 1.0, constant: 2).isActive = true
+        self.contributorsLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 2).isActive = true
+        self.contributorsLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 2).isActive = true
         
         
     }

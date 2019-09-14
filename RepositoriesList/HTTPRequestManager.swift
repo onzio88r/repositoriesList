@@ -103,7 +103,7 @@ func ContributorsList(contributionUrl:String, completion: ((Result<Contributors,
     let session = URLSession.shared
     
     var urlComponent = requestURLComponent()
-    urlComponent.path = contributionUrl
+    urlComponent.path = contributionUrl.replacingOccurrences(of: "https://api.github.com", with: "")
     
     guard let url = urlComponent.url else { fatalError("Could not create URL from components") }
     
