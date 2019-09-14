@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-     let collectionView:UICollectionView = {
+    fileprivate let collectionView:UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)

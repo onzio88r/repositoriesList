@@ -17,6 +17,11 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listRepositories.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+       
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! RepositoryCollectionViewCell
         
@@ -28,7 +33,7 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
             switch response {
             case .success(let result) :
                 print(result.count)
-                model.contributors = result.count
+                model.contributors = result
                 cell.repoViewModel = model
             case .failure(let error):
                 print(error)
@@ -41,11 +46,13 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailsVc = DetailsUIViewController()
+        let detailsVc = DetailsViewController()
         let cell = collectionView.cellForItem(at: indexPath) as! RepositoryCollectionViewCell
         detailsVc.repoViewModel = cell.repoViewModel
+        cell.isSelected = true
         self.navigationController?.pushViewController(detailsVc, animated: true)
     }
+    
     
 }
 

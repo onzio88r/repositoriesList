@@ -20,7 +20,7 @@
 		089C439C232CF55500740EE2 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439B232CF55500740EE2 /* Struct.swift */; };
 		089C439E232CF6E400740EE2 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */; };
 		089C43A0232D07C100740EE2 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439F232D07C100740EE2 /* CollectionViewModel.swift */; };
-		089C43A2232D20AF00740EE2 /* DetailsUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A1232D20AF00740EE2 /* DetailsUIViewController.swift */; };
+		089C43A2232D20AF00740EE2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A1232D20AF00740EE2 /* DetailsViewController.swift */; };
 		089C43A4232D27A900740EE2 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A3232D27A800740EE2 /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,7 @@
 		089C439B232CF55500740EE2 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
 		089C439F232D07C100740EE2 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
-		089C43A1232D20AF00740EE2 /* DetailsUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUIViewController.swift; sourceTree = "<group>"; };
+		089C43A1232D20AF00740EE2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		089C43A3232D27A800740EE2 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				089C4365232CEC5400740EE2 /* AppDelegate.swift */,
-				089C4367232CEC5400740EE2 /* ViewController.swift */,
 				089C4369232CEC5400740EE2 /* Main.storyboard */,
 				089C436F232CEC5500740EE2 /* Assets.xcassets */,
 				089C4371232CEC5500740EE2 /* LaunchScreen.storyboard */,
@@ -123,9 +122,7 @@
 				089C439A232CF27C00740EE2 /* CollectionView */,
 				089C439B232CF55500740EE2 /* Struct.swift */,
 				089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */,
-				089C439F232D07C100740EE2 /* CollectionViewModel.swift */,
-				089C43A1232D20AF00740EE2 /* DetailsUIViewController.swift */,
-				089C43A3232D27A800740EE2 /* DetailsViewModel.swift */,
+				089C43A5232D3BC000740EE2 /* Details View */,
 			);
 			path = RepositoriesList;
 			sourceTree = "<group>";
@@ -151,10 +148,21 @@
 		089C439A232CF27C00740EE2 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				089C4367232CEC5400740EE2 /* ViewController.swift */,
+				089C439F232D07C100740EE2 /* CollectionViewModel.swift */,
 				089C4396232CEF0B00740EE2 /* CollectionViewDataSource.swift */,
 				089C4398232CF27500740EE2 /* RepositoryCollectionViewCell.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		089C43A5232D3BC000740EE2 /* Details View */ = {
+			isa = PBXGroup;
+			children = (
+				089C43A1232D20AF00740EE2 /* DetailsViewController.swift */,
+				089C43A3232D27A800740EE2 /* DetailsViewModel.swift */,
+			);
+			path = "Details View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +304,7 @@
 				089C4399232CF27500740EE2 /* RepositoryCollectionViewCell.swift in Sources */,
 				089C439E232CF6E400740EE2 /* HTTPRequestManager.swift in Sources */,
 				089C43A4232D27A900740EE2 /* DetailsViewModel.swift in Sources */,
-				089C43A2232D20AF00740EE2 /* DetailsUIViewController.swift in Sources */,
+				089C43A2232D20AF00740EE2 /* DetailsViewController.swift in Sources */,
 				089C4397232CEF0B00740EE2 /* CollectionViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

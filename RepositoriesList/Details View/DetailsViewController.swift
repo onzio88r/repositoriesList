@@ -8,17 +8,25 @@
 
 import UIKit
 
-class DetailsUIViewController: UIViewController {
+class DetailsViewController: UIViewController {
 
     var nameLabel: UILabel!
     var descriptionLabel: UILabel!
     var loginOwnerLabel: UILabel!
-    var contributors: UILabel!
+    var contributorsLabel: UILabel!
+    
+    var contributorsList = UITableView()
     
     var repoViewModel: CollectionViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contributorsList.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        contributorsList.delegate = self
+        contributorsList.dataSource = self
+        
+        contributorsList.allowsSelection = false
 
         nameLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: self.view.bounds.width, height: 15)))
         self.view.addSubview(nameLabel)
@@ -30,14 +38,17 @@ class DetailsUIViewController: UIViewController {
         loginOwnerLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: self.view.bounds.width, height: 15)))
         self.view.addSubview(loginOwnerLabel)
         
-        contributors = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: self.view.bounds.width, height: 15)))
-        self.view.addSubview(contributors)
+        contributorsLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: self.view.bounds.width, height: 15)))
+        self.view.addSubview(contributorsLabel)
         
+        self.view.addSubview(contributorsList)
+
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         loginOwnerLabel.translatesAutoresizingMaskIntoConstraints = false
-        contributors.translatesAutoresizingMaskIntoConstraints = false
+        contributorsLabel.translatesAutoresizingMaskIntoConstraints = false
+        contributorsList.translatesAutoresizingMaskIntoConstraints = false
         
          let margin = view.layoutMarginsGuide
         
@@ -53,10 +64,15 @@ class DetailsUIViewController: UIViewController {
         self.loginOwnerLabel.leadingAnchor.constraint(equalTo: margin.leadingAnchor, constant: 2).isActive = true
         self.loginOwnerLabel.trailingAnchor.constraint(equalTo: margin.trailingAnchor, constant: 2).isActive = true
         
-        NSLayoutConstraint(item: contributors!, attribute: .top, relatedBy: .equal, toItem: loginOwnerLabel, attribute: .bottom, multiplier: 1.0, constant: 5).isActive = true
-        self.contributors.leadingAnchor.constraint(equalTo: margin.leadingAnchor, constant: 2).isActive = true
-        self.contributors.trailingAnchor.constraint(equalTo: margin.trailingAnchor, constant: 2).isActive = true
+        NSLayoutConstraint(item: contributorsLabel!, attribute: .top, relatedBy: .equal, toItem: loginOwnerLabel, attribute: .bottom, multiplier: 1.0, constant: 5).isActive = true
+        self.contributorsLabel.leadingAnchor.constraint(equalTo: margin.leadingAnchor, constant: 2).isActive = true
+        self.contributorsLabel.trailingAnchor.constraint(equalTo: margin.trailingAnchor, constant: 2).isActive = true
         
+
+        contributorsList.topAnchor.constraint(equalTo: contributorsLabel.bottomAnchor).isActive = true
+        contributorsList.leftAnchor.constraint(equalTo: margin.leftAnchor).isActive = true
+        contributorsList.bottomAnchor.constraint(equalTo: margin.bottomAnchor).isActive = true
+        contributorsList.rightAnchor.constraint(equalTo: margin.rightAnchor).isActive = true
         
     }
     

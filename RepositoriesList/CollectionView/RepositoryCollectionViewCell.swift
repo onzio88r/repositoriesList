@@ -20,9 +20,20 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         self.nameLabel.text = repoViewModel.name
         self.descriptionLabel.text = repoViewModel.description
         self.loginOwnerLabel.text = repoViewModel.loginOwner
-        self.contributorsLabel.text = "Contributors: \(repoViewModel.contributors)"
+        self.contributorsLabel.text = "Contributors: \(repoViewModel.contributors?.count ?? 0)"
         
         self.backgroundColor = repoViewModel.fork ? .green : .white
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                self.layer.borderWidth = 2.0
+                self.layer.borderColor = UIColor.red.cgColor
+            }else {
+                self.layer.borderWidth = 0.0
+            }
         }
     }
 
