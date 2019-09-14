@@ -19,6 +19,7 @@
 		089C4399232CF27500740EE2 /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C4398232CF27500740EE2 /* RepositoryCollectionViewCell.swift */; };
 		089C439C232CF55500740EE2 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439B232CF55500740EE2 /* Struct.swift */; };
 		089C439E232CF6E400740EE2 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */; };
+		089C43A0232D07C100740EE2 /* collectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439F232D07C100740EE2 /* collectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		089C4398232CF27500740EE2 /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		089C439B232CF55500740EE2 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
+		089C439F232D07C100740EE2 /* collectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				089C439A232CF27C00740EE2 /* CollectionView */,
 				089C439B232CF55500740EE2 /* Struct.swift */,
 				089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */,
+				089C439F232D07C100740EE2 /* collectionViewModel.swift */,
 			);
 			path = RepositoriesList;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				089C4368232CEC5400740EE2 /* ViewController.swift in Sources */,
 				089C4366232CEC5400740EE2 /* AppDelegate.swift in Sources */,
 				089C436E232CEC5400740EE2 /* RepositoriesList.xcdatamodeld in Sources */,
+				089C43A0232D07C100740EE2 /* collectionViewModel.swift in Sources */,
 				089C4399232CF27500740EE2 /* RepositoryCollectionViewCell.swift in Sources */,
 				089C439E232CF6E400740EE2 /* HTTPRequestManager.swift in Sources */,
 				089C4397232CEF0B00740EE2 /* CollectionViewDataSource.swift in Sources */,

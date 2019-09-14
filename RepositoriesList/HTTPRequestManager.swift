@@ -21,6 +21,7 @@ public func urlRequest(url: URL) -> URLRequest{
     request.httpMethod = "GET"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
     request.setValue("application/json", forHTTPHeaderField: "Accept")
+    request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
     
     return request
 }

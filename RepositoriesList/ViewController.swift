@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        cv.register(RepositoryCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         return cv
     }()
     
@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         collectionView.leadingAnchor.constraint(equalTo: margin.leadingAnchor).isActive = true
         collectionView.topAnchor.constraint(equalToSystemSpacingBelow: margin.topAnchor, multiplier: 1.0).isActive = true
         collectionView.bottomAnchor.constraint(equalToSystemSpacingBelow: margin.bottomAnchor, multiplier: 1.0).isActive = true
-        
         
         getRepositoriesData()
         
