@@ -78,7 +78,6 @@ class DetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         configureView(repoViewModel: repoViewModel)
     }
 

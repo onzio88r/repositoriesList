@@ -54,6 +54,8 @@ func ReposList(completion: ((Result<Repositories,Error>) -> Void)?) {
         DispatchQueue.main.sync {
             if error != nil || data == nil {
                 print("Client error!")
+                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Client error!"]) as Error
+                completion?(.failure(error))
                 return
             }
             
@@ -84,6 +86,9 @@ func ReposList(completion: ((Result<Repositories,Error>) -> Void)?) {
                 }
                 
                 let repositoriesList = try decoder.decode([Repository].self, from: jsonData)
+                
+                let repoDefault = try! JSONEncoder().encode(repositoriesList)
+                UserDefaults.standard.setValue(repoDefault, forKey: "RepositoryList")
                 
                 completion?(.success(repositoriesList))
                 

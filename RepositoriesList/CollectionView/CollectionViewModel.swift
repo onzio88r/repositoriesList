@@ -13,7 +13,7 @@ public class CollectionViewModel {
     public let name: String
     public let  description: String
     public let  loginOwner: String
-            var  contributors: Contributors?
+    var  contributors: Contributors?
     public let  fork: Bool
     public let  contributorsUrl: String
     
@@ -25,6 +25,6 @@ public class CollectionViewModel {
         self.fork = repository.fork
         self.contributorsUrl = repository.contributorsURL
     }
-
+    
     
 }

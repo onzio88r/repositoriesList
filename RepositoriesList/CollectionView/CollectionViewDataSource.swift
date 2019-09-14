@@ -19,7 +19,7 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-       
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,6 +50,7 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
         let cell = collectionView.cellForItem(at: indexPath) as! RepositoryCollectionViewCell
         detailsVc.repoViewModel = cell.repoViewModel
         cell.isSelected = true
+        
         self.navigationController?.pushViewController(detailsVc, animated: true)
     }
     
@@ -68,8 +69,19 @@ extension ViewController {
                 
             case .failure(let error):
                 print("Erorr : ",error)
+                self.getRepositoriesDataOffline()
             }
         }
+    }
+    
+    func getRepositoriesDataOffline(){
+        var repo:Repositories?
+        if  let repoData = UserDefaults.standard.data(forKey: "RepositoryList") {
+            repo = try! JSONDecoder().decode(Repositories.self, from: repoData)
+            self.listRepositories = repo!
+        }
+        
+        print("Repo from offline: ",repo?.count ?? 0)
     }
     
 }

@@ -22,6 +22,7 @@
 		089C43A0232D07C100740EE2 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C439F232D07C100740EE2 /* CollectionViewModel.swift */; };
 		089C43A2232D20AF00740EE2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A1232D20AF00740EE2 /* DetailsViewController.swift */; };
 		089C43A4232D27A900740EE2 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A3232D27A800740EE2 /* DetailsViewModel.swift */; };
+		089C43A7232D4C5800740EE2 /* ContributorsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A6232D4C5800740EE2 /* ContributorsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		089C439F232D07C100740EE2 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		089C43A1232D20AF00740EE2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		089C43A3232D27A800740EE2 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		089C43A6232D4C5800740EE2 /* ContributorsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +121,9 @@
 				089C4371232CEC5500740EE2 /* LaunchScreen.storyboard */,
 				089C4374232CEC5500740EE2 /* Info.plist */,
 				089C436C232CEC5400740EE2 /* RepositoriesList.xcdatamodeld */,
-				089C439A232CF27C00740EE2 /* CollectionView */,
 				089C439B232CF55500740EE2 /* Struct.swift */,
 				089C439D232CF6E400740EE2 /* HTTPRequestManager.swift */,
+				089C439A232CF27C00740EE2 /* CollectionView */,
 				089C43A5232D3BC000740EE2 /* Details View */,
 			);
 			path = RepositoriesList;
@@ -161,6 +163,7 @@
 			children = (
 				089C43A1232D20AF00740EE2 /* DetailsViewController.swift */,
 				089C43A3232D27A800740EE2 /* DetailsViewModel.swift */,
+				089C43A6232D4C5800740EE2 /* ContributorsDataSource.swift */,
 			);
 			path = "Details View";
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				089C43A0232D07C100740EE2 /* CollectionViewModel.swift in Sources */,
 				089C4399232CF27500740EE2 /* RepositoryCollectionViewCell.swift in Sources */,
 				089C439E232CF6E400740EE2 /* HTTPRequestManager.swift in Sources */,
+				089C43A7232D4C5800740EE2 /* ContributorsDataSource.swift in Sources */,
 				089C43A4232D27A900740EE2 /* DetailsViewModel.swift in Sources */,
 				089C43A2232D20AF00740EE2 /* DetailsViewController.swift in Sources */,
 				089C4397232CEF0B00740EE2 /* CollectionViewDataSource.swift in Sources */,
