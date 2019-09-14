@@ -49,9 +49,15 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
         let detailsVc = DetailsViewController()
         let cell = collectionView.cellForItem(at: indexPath) as! RepositoryCollectionViewCell
         detailsVc.repoViewModel = cell.repoViewModel
-        cell.isSelected = true
         
-        self.navigationController?.pushViewController(detailsVc, animated: true)
+        if Connectivity.isConnectedToInternet() {
+        
+            self.navigationController?.pushViewController(detailsVc, animated: true)
+        
+        }else {
+            showAlert(message: "No Internet connection, you can see only the repositories list")
+        }
+        
     }
     
     
@@ -69,7 +75,6 @@ extension ViewController {
                 
             case .failure(let error):
                 print("Erorr : ",error)
-                self.getRepositoriesDataOffline()
             }
         }
     }

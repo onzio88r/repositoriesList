@@ -43,10 +43,31 @@ class ViewController: UIViewController {
         collectionView.topAnchor.constraint(equalToSystemSpacingBelow: margin.topAnchor, multiplier: 1.0).isActive = true
         collectionView.bottomAnchor.constraint(equalToSystemSpacingBelow: margin.bottomAnchor, multiplier: 1.0).isActive = true
         
-        getRepositoriesData()
+        if Connectivity.isConnectedToInternet() {
+            print("Yes! internet is available.")
+            getRepositoriesData()
+        }else {
+            print("Internet not available, we'll try to use the offline data")
+            getRepositoriesDataOffline()
+        }
+        
+        
         
     }
     
+}
+
+extension UIViewController {
+    func showAlert(message:String){
+        
+        let optionMenu = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+        
+        let deleteAction = UIAlertAction(title: "OK", style: .cancel)
+        
+        optionMenu.addAction(deleteAction)
+        
+        self.present(optionMenu, animated: true, completion: nil)
+    }
     
 }
 
