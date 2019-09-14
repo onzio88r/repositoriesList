@@ -25,6 +25,11 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailsVc = DetailsUIViewController()
+        self.navigationController?.pushViewController(detailsVc, animated: true)
+    }
+    
 }
 
 extension ViewController {
