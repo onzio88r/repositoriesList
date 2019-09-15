@@ -10,14 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    /// Collection view for repositories list
     fileprivate let collectionView:UICollectionView = {
+       
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
+            layout.scrollDirection = .vertical
+        
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(RepositoryCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+            cv.register(RepositoryCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        
         return cv
     }()
     
+    
+    /// List of repositories, decoded from Json
     var listRepositories = Repositories() {
         didSet {
             self.collectionView.reloadData()
@@ -26,6 +33,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         navigationController?.navigationBar.topItem?.title = "Repositories"
 
@@ -58,6 +66,10 @@ class ViewController: UIViewController {
 }
 
 extension UIViewController {
+    
+    /// ActionSheet popup to show messages.
+    ///
+    /// - Parameter message: Text to show on the dialog popup
     func showAlert(message:String){
         
         let optionMenu = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)

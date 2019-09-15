@@ -65,6 +65,8 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
 
 extension ViewController {
     
+    
+    /// Get repositories list from online
     func getRepositoriesData() {
         ReposList { (response) in
             switch response {
@@ -79,6 +81,7 @@ extension ViewController {
         }
     }
     
+    // Get repositories list from offline data
     func getRepositoriesDataOffline(){
         var repo:Repositories?
         if  let repoData = UserDefaults.standard.data(forKey: "RepositoryList") {

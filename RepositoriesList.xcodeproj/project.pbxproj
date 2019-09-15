@@ -24,6 +24,7 @@
 		089C43A4232D27A900740EE2 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A3232D27A800740EE2 /* DetailsViewModel.swift */; };
 		089C43A7232D4C5800740EE2 /* ContributorsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A6232D4C5800740EE2 /* ContributorsDataSource.swift */; };
 		089C43A9232D532800740EE2 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089C43A8232D532800740EE2 /* Connectivity.swift */; };
+		08FE919E232E331A004F2C29 /* final_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 08FE919D232E331A004F2C29 /* final_notes.txt */; };
 		550030B58456C2BDD86C9630 /* Pods_RepositoriesList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA155C3D566109387C4403E /* Pods_RepositoriesList.framework */; };
 		8D579EA4F027741F1DC4D3DA /* Pods_RepositoriesListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D499933D004791D3D492775 /* Pods_RepositoriesListTests.framework */; };
 		9E2A0A7FA8A87E4BC0EAAD17 /* Pods_RepositoriesListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160F728E10392FB9F6A85B11 /* Pods_RepositoriesListUITests.framework */; };
@@ -70,6 +71,7 @@
 		089C43A3232D27A800740EE2 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		089C43A6232D4C5800740EE2 /* ContributorsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsDataSource.swift; sourceTree = "<group>"; };
 		089C43A8232D532800740EE2 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		08FE919D232E331A004F2C29 /* final_notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = final_notes.txt; sourceTree = "<group>"; };
 		160F728E10392FB9F6A85B11 /* Pods_RepositoriesListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RepositoriesListUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E164770CAC86BE860F3F835 /* Pods-RepositoriesListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriesListUITests.release.xcconfig"; path = "Target Support Files/Pods-RepositoriesListUITests/Pods-RepositoriesListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		700D423114C91ACB5BB3D534 /* Pods-RepositoriesList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RepositoriesList.release.xcconfig"; path = "Target Support Files/Pods-RepositoriesList/Pods-RepositoriesList.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				089C439A232CF27C00740EE2 /* CollectionView */,
 				089C43A5232D3BC000740EE2 /* Details View */,
 				089C43A8232D532800740EE2 /* Connectivity.swift */,
+				08FE919D232E331A004F2C29 /* final_notes.txt */,
 			);
 			path = RepositoriesList;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				089C4373232CEC5500740EE2 /* LaunchScreen.storyboard in Resources */,
 				089C4370232CEC5500740EE2 /* Assets.xcassets in Resources */,
 				089C436B232CEC5400740EE2 /* Main.storyboard in Resources */,
+				08FE919E232E331A004F2C29 /* final_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

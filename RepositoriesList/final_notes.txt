@@ -1,0 +1,44 @@
+Struc ture of the app :
+
+MAIN VIEW :
+
+AppDelegate.swift - Created the UINavigationController logic to manage the navigation flow when a repository it's tapped
+
+ViewController.swift - Main view of the app, where is present the UICollectionView
+
+CollectionViewModel.swift - ViewModel of the repository, also used to pass the data from the main view to the details
+
+CollectionViewDataSource.swift - Collection view data source managing
+
+RepositoryCollectionViewCell.swift - Custom class for the repository cell on the UICollectionView
+
+DETAILS :
+
+DetailsViewController.swift - Main class of the details, managing of the elements on the view
+
+DetailsViewModel.swift - View model for the details view
+
+ContributorsDataSource.swift - TableView data source to manage the list of contributors for the selected repository
+
+Connectivity.swift - Class to detect the device connection status. Variable used to select which data show on the list. Data from online or offline 
+
+
+
+
+Git issue :
+
+About a little issue on git, to retrieve the data for "collaborators_url" finally I use the same data but with the result from "contributors_url", to avoid wasting time to fix the issue
+
+I tried to configure the access token on git request, but the response from the call was :
+
+
+url request : https://api.github.com/repos/xing/amiando/collaborators?access_token=a5ff8039cf1fdb4046fd77ad1e3c59e8e73ab439
+
+Response :
+
+{
+"message": "Must have push access to view repository collaborators.",
+"documentation_url": "https://developer.github.com/v3/repos/collaborators/#list-collaborators"
+}
+
+

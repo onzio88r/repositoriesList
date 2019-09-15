@@ -26,6 +26,9 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    
+    /// Override of isSelected, if true will be visible a red border around the
+    /// selected repository
     override var isSelected: Bool {
         didSet {
             if self.isSelected {
@@ -49,6 +52,8 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    /// View setup
     private func setup(){
         
         self.nameLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: frame.width-10, height: 15)))
@@ -68,8 +73,9 @@ class RepositoryCollectionViewCell: UICollectionViewCell {
         
     }
     
+      //MARK: - Constraint
+    
     private func cellConstraint(){
-        //MARK: - Constraint
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
