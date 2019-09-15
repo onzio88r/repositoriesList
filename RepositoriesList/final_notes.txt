@@ -32,7 +32,7 @@ About a little issue on git, to retrieve the data for "collaborators_url" finall
 I tried to configure the access token on git request, but the response from the call was :
 
 
-url request : https://api.github.com/repos/xing/amiando/collaborators?access_token=a5ff8039cf1fdb4046fd77ad1e3c59e8e73ab439
+url request : https://api.github.com/repos/xing/amiando/collaborators?access_token=<ACCESS TOKEN>
 
 Response :
 
