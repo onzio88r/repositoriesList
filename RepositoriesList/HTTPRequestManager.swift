@@ -38,13 +38,20 @@ func requestURLComponent() -> URLComponents {
 
 /// Get the list of repositories for https://api.github.com/users/xing/repos
 ///
-/// - Parameter completion: Return a list of repositories, or error otherwise
-func ReposList(completion: ((Result<Repositories,Error>) -> Void)?) {
+/// - Parameters:
+///   - page: Page to load
+///   - perPage: number of item per page
+///   - completion: Repositories or Error
+func ReposList(page:Int = 0, perPage:Int = 10,completion: ((Result<Repositories,Error>) -> Void)?) {
     
     let session = URLSession.shared
     
     var urlComponent = requestURLComponent()
     urlComponent.path = "/users/xing/repos"
+        urlComponent.queryItems = [
+            URLQueryItem(name: "page", value: String(page)),
+            URLQueryItem(name: "per_page", value: String(perPage))
+    ]
     
     guard let url = urlComponent.url else { fatalError("Could not create URL from components") }
     

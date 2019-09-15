@@ -20,6 +20,13 @@ extension ViewController : UICollectionViewDelegateFlowLayout, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
+        if indexPath.row == self.listRepositories.count - 2 && !isLoadingData {
+            isLoadingData = true
+            pageNumber += 1
+            getRepositoriesData(page: pageNumber)
+            
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -67,13 +74,13 @@ extension ViewController {
     
     
     /// Get repositories list from online
-    func getRepositoriesData() {
-        ReposList { (response) in
+    func getRepositoriesData(page:Int) {
+        ReposList(page: page, perPage: 10) { (response) in
             switch response {
                 
             case .success( let result ):
                 print("We have \(result.count) repositories")
-                self.listRepositories = result
+                self.listRepositories.append(contentsOf: result)
                 
             case .failure(let error):
                 print("Erorr : ",error)

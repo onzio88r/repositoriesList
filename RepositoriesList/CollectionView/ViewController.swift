@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var isLoadingData = false
+    var pageNumber = 0
     
     /// Collection view for repositories list
     fileprivate let collectionView:UICollectionView = {
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
         
         if Connectivity.isConnectedToInternet() {
             print("Yes! internet is available.")
-            getRepositoriesData()
+            getRepositoriesData(page: 0)
         }else {
             print("Internet not available, we'll try to use the offline data")
             getRepositoriesDataOffline()
